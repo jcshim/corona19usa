@@ -9,12 +9,15 @@
 |3월1일 | 41|
 |3월2일 | 57|
 |3월3일 | 84|
+|3월4일 | 111|
+|3월5일 | 142|
+
 
 # 선형예측  
     xmax=20
     ymax=300
-    y<-c(14,18,23,41,57,84)
-    x<-c(1:6)
+    y<-c(14,18,23,41,57,84, 111, 142) # 8
+    x<-c(1:8)
     lm(x~y)
     #fit first degree polynomial equation:
     fit1<-lm(y ~ x)
@@ -46,5 +49,5 @@
     axis(side=1, at=c(4:xmax), labels=c(1:(xmax-3)))#,col="red") #, lwd=2.5)
 
     axis(side=2, at=y, labels=y, col.axis="blue", las=2)
-    axis(side=2, at=c(100:ymax), labels=c(100:ymax))#, col="red", col.axis="green)
+    axis(side=2, at=c(200:ymax), labels=c(200:ymax))#, col="red", col.axis="green)
 
